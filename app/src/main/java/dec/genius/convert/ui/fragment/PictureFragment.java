@@ -20,6 +20,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.lib_cxq_common.util.ToastUtil;
+
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 
@@ -68,6 +70,8 @@ public class PictureFragment extends BaseFragment {
         });
     }
     private void initData() {
+        L.e(pics.toString());
+        ToastUtil.showToast(getContext(),pics.toString());
         adapter= new PicRecyclerViewAdapter(pics);
     }
     private void initView() {
