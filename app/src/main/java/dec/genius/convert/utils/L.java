@@ -9,7 +9,7 @@ import dec.genius.convert.base.MyApplication;
  * Created by Administrator on 2017/7/19 0019.
  */
 
-public class LogUtil {
+public class L {
     public static String tagPrefix = "QT";//log前缀
     public static boolean debug = MyApplication.isDevelop;
 

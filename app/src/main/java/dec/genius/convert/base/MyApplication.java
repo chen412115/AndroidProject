@@ -45,7 +45,7 @@ public class MyApplication extends Application {
 
     //创建xutils的数据库
     static DbManager.DaoConfig daoConfig = new DbManager.DaoConfig()
-            .setDbName("kanyikan.db")
+            .setDbName("convertgenius.db")
 //            .setDbDir(new File("/sdcard/huiyou"))
 //            .setDbDir(new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/hy"))
             .setDbVersion(1)

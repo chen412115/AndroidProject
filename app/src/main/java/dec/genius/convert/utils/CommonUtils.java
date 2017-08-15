@@ -7,6 +7,7 @@ import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Environment;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -53,7 +54,7 @@ import okhttp3.RequestBody;
 * */
 
 public class CommonUtils {
-
+    static String path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/";
     public static final String REGEXP_MOBILE = "^1[3-8]\\d{9}$";
     public static final String REGEXP_CHINESE_STR = "^[\u4E00-\u9FA5]+$";
     public static final Pattern REG_CHINESE_STR = Pattern.compile(REGEXP_CHINESE_STR);
