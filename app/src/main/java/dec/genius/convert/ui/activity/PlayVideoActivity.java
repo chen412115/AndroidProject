@@ -11,7 +11,6 @@ import org.xutils.view.annotation.ContentView;
 import dec.genius.convert.R;
 import dec.genius.convert.base.BaseActivity;
 import dec.genius.convert.ijkplayer.common.PlayerManager;
-import dec.genius.convert.ijkplayer.playerview.widget.PlayerView;
 import dec.genius.convert.netstatus.NetUtils;
 @ContentView(R.layout.activity_play_video)
 public class PlayVideoActivity extends BaseActivity implements PlayerManager.PlayerStateListener{
