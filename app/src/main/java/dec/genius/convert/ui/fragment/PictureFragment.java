@@ -82,7 +82,15 @@ public class PictureFragment extends BaseFragment {
     }
     public void getPics(){
         pics = new ArrayList<>();
-        setPermissions();
+        Cursor cursor = getActivity().getContentResolver().query(
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI, null, null, null, null);
+        while (cursor.moveToNext()) {
+            //获取图片的名称
+            String name = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DISPLAY_NAME));
+            //获取图片绝对路径
+            String desc = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
+            pics.add(new Pic(name,desc));
+        }
     }
     static final String[] PERMISSION = new String[]{
             Manifest.permission.READ_CONTACTS,// 写入权限

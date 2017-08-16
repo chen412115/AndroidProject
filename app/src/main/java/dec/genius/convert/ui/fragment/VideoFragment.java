@@ -28,6 +28,7 @@ import java.util.List;
 
 import dec.genius.convert.R;
 import dec.genius.convert.base.BaseFragment;
+import dec.genius.convert.ui.activity.PlayVideoActivity;
 import dec.genius.convert.ui.adapter.VideoRecyclerViewAdapter;
 import dec.genius.convert.utils.AppPreferences;
 import dec.genius.convert.utils.L;
@@ -96,9 +97,9 @@ public class VideoFragment extends BaseFragment {
                 L.e( "本地视频："+videos.toString() );
                 String selectPath = selectVideo.getAbsolutePath();
                 L.e("selectpath"+selectPath);
-                //Intent intent = new Intent(getActivity(), PlayActivity.class);
-                //intent.putExtra("selectVideo",selectPath);
-                //startActivity(intent);
+                Intent intent = new Intent(getActivity(), PlayVideoActivity.class);
+                intent.putExtra("selectVideo",selectPath);
+                startActivity(intent);
             }
         });
     }

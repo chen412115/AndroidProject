@@ -46,6 +46,7 @@
         <activity android:name=".ui.activity.FirstActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -58,7 +59,10 @@
         </receiver>
 
         <activity android:name=".ui.activity.GuideActivity" />
-        <activity android:name=".FlashActivity"></activity>
+        <activity android:name=".FlashActivity" />
+        <activity android:name=".ui.activity.PlayVideoActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"></activity>
     </application>
 
 </manifest>
